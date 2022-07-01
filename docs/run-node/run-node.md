@@ -73,7 +73,7 @@ Now that your account has some tokens, you need to add a validator to your chain
 
 ```bash
 # Create a gentx.
-simd gentx my_validator 100000000stake --chain-id my-test-chain --keyring-backend test
+simd gentx my_validator 7000000stake --chain-id my-test-chain --keyring-backend test
 
 # Add the gentx to the genesis file.
 simd collect-gentxs
@@ -114,7 +114,7 @@ One example config to tweak is the `minimum-gas-prices` field inside `app.toml`,
 Now that everything is set up, you can finally start your node:
 
 ```bash
-simd start --mode validator
+simd start
 ```
 
 > Note: By default nodes are run in full node mode. Running a local network means in most cases, the node is the only node in the network, requiring you to set the mode. 
